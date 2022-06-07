@@ -28,3 +28,14 @@ now that our code is running, we will add a query to get a particular rapper nam
 use /:name for event listener
 request.params.name will get the name
 then response.json or sendFile with object['name']
+
+-----
+- login to heroku 'heroku login -i' 
+- heroku create xxx name of api 
+
+now to let heroku know which server to start, we need a procfile
+    a procfile is just text eg' web: node server.js'
+    command -  echo 'web: node server.js' > procfile
+
+if we push our code to heroku, heroku needs to set their own ports
+so we will add process.env.PORT || PORT (to backup to hardcoded port)
