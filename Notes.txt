@@ -1,0 +1,30 @@
+Making a node js app
+this application only sends json requests
+ - one index page for documentation and rest is json data
+
+1st step - create folder >
+    - npm init (to initialize)
+    - npm install express --save 
+    - git ignore is just a file where we will add node modules (not needed by git)
+    - create server.js
+
+2.  server.js 
+    const express = require('express')
+    const app  = express ()
+    - serve a file to test if server is working
+    - 
+    -add event listener for '/' (app.get('/',(req,res)=>{
+        response.sendFile('__dirname/index.html')
+        __dirname represents the directory
+        }))
+
+3.  add listener to server for incomming requests and tell what to do 
+4. to turn on node , write node server.js to turn it on 
+----------------------------------------
+after changes , we need to restart node crtl+c and node server.js
+---
+now that our code is running, we will add a query to get a particular rapper name
+
+use /:name for event listener
+request.params.name will get the name
+then response.json or sendFile with object['name']
